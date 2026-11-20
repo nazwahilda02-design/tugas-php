@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pribadi Saya</title>
+
+    <style>
+        /* CSS UTAMA */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f0ff;
+            color: #555467f1;
+        }
+
+        /* NAVIGASI */
+        nav {
+            background: #595461;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #f5d0fe;
+        }
+
+        /* HALAMAN UTAMA */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 10%;
+            gap: 40px;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text h3 {
+            color: #66616e;
+            margin-bottom: 12px;
+        }
+
+        .hero-text h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .tombol {
+            display: inline-block;
+            background: #605d66;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+
+        .tombol:hover {
+            background: #645f6d;
+        }
+
+        /* FOTO PROFIL */
+        .foto {
+            width: 230px;
+            height: 280px;
+            border-radius: 25px;
+            border: 5px solid white;
+            background: #e5d5ff;
+            box-shadow: 0 8px 25px #d0bdf2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        /* BAGIAN DATA */
+        section {
+            padding: 60px 10%;
+            scroll-margin-top: 20px;
+        }
+
+        .judul {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+            color: #6c657b;
+        }
+
+        .kartu {
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 5px 18px #e3d7f5;
+            margin-bottom: 20px;
+        }
+
+        .data {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .data p {
+            background: #f5f0ff;
+            padding: 15px;
+            border-radius: 10px;
+            line-height: 1.6;
+        }
+
+        .kartu h3 {
+            color: #665e75;
+            margin-bottom: 12px;
+        }
+
+        .kartu p,
+        .kartu li {
+            line-height: 1.8;
+        }
+
+        .kartu ul {
+            padding-left: 22px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #c5bfd1;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* TAMPILAN HP */
+        @media (max-width: 700px) {
+            nav {
+                justify-content: center;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 45px 7%;
+            }
+
+            .hero-text h1 {
+                font-size: 32px;
+            }
+
+            .data {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 45px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGASI -->
+    <nav>
+        <h2>MyProfile.</h2>
+
+        <ul>
+            <li><a href="#profil">Beranda</a></li>
+            <li><a href="#data">Data Saya</a></li>
+            <li><a href="#mapel">Mata Pelajaran</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#ekskul">Ekstrakurikuler</a></li>
+        </ul>
+    </nav>
+
+    <!-- HALAMAN UTAMA -->
+    <main>
+        <div class="hero" id="profil">
+
+            <div class="hero-text">
+                <h3>HALO, SELAMAT DATANG!</h3>
+
+                <h1>Profil Pribadi Saya</h1>
+
+                <p>
+                    Perkenalkan, nama saya Nazwa Hilda Aqila.
+                    Saya adalah siswi kelas X RPL 3 di
+                    SMK Negeri 1 Gunung Putri.
+                    Saya tertarik mempelajari teknologi,
+                    pemrograman, dan pengembangan website.
+                </p>
+
+                <a href="#data" class="tombol">
+                    Lihat Profil Saya
+                </a>
+            </div>
+
+            <div class="foto">
+                <!-- Ganti foto-profil.jpg dengan nama file foto kamu -->
+                <img src="c:\Users\ASUS Vivobook\Downloads\WhatsApp Image 2026-10-26 at 9.18.31 AM.jpeg"
+                     alt="Foto profile Nazwa Hilda Aqila"
+                     onerror="this.style.display='none';
+                     this.parentElement.innerHTML='Tempat Foto Profil';">
+            </div>
+
+        </div>
+
+        <!-- DATA PRIBADI -->
+        <section id="data">
+            <h2 class="judul">Data Pribadi Saya</h2>
+
+            <div class="kartu data">
+                <p><b>Nama:</b> Nazwa Hilda Aqila</p>
+                <p><b>Tempat, Tanggal Lahir:</b> Bogor 2 mei 2010</p>
+                <p><b>Alamat:</b> kp.tlajung, wanaherang, gunungputri, bogor</p>
+                <p><b>Email:</b> nazwahilda02@gmail.com</p>
+                <p><b>Kelas:</b> X RPL 3</p>
+                <p><b>Sekolah:</b> SMK Negeri 1 Gunung Putri</p>
+                <p><b>Hobi:</b> mendengarkan musik</p>
+                <p><b>Motto:</b> stay true to yourself..</p>
+            </div>
+        </section>
+
+        <!-- MATA PELAJARAN -->
+        <section id="mapel">
+            <h2 class="judul">Mata Pelajaran</h2>
+
+            <div class="kartu">
+                <h3>Mata Pelajaran yang Saya Pelajari</h3>
+                <ul>
+                    <li>Informatika</li>
+                    <li>Matematika</li>
+                    <li>Bahasa Indonesia</li>
+                    <li>Bahasa Inggris</li>
+                    <li>Sejarah</li>
+                    <li>Pendidikan Pancasila</li>
+                    <li>Dasar-Dasar RPL</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section id="portfolio">
+            <h2 class="judul">Portfolio Saya</h2>
+
+            <div class="kartu">
+                <h3>Proyek dan Hasil Belajar</h3>
+                <p>
+                    Berikut adalah beberapa proyek yang ingin
+                    saya kembangkan selama belajar di jurusan RPL.
+                </p>
+                <ul>
+                    <li>Membuat website profil pribadi.</li>
+                    <li>Membuat program sederhana menggunakan Python.</li>
+                    <li>Mempelajari HTML dan CSS.</li>
+                    <li>Membuat profile pribadi.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- EKSTRAKURIKULER -->
+        <section id="ekskul">
+            <h2 class="judul">Ekstrakurikuler</h2>
+
+            <div class="kartu">
+                <h3>Kegiatan yang Saya Ikuti</h3>
+                <p>
+                    Saya mengikuti ekstrakurikuler:
+                    <b>badminton.</b>
+                </p>
+                <p>
+                    Melalui kegiatan ini, saya ingin menambah
+                    pengalaman,
+                    dan belajar bekerja sama dengan teman.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PENUTUP -->
+    <footer>
+        <p>© 2026 Profil Pribadi Saya</p>
+        <p>Belajar, Berkarya, dan Terus Berkembang.</p>
+    </footer>
+
+</body>
+</html>
